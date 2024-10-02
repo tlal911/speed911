@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- OST Widget code start -->
+<style>
+    /* تأثير الظل والتكبير عند التمرير */
+    .speedtest-widget iframe {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .speedtest-widget:hover iframe {
+        transform: scale(1.02); /* تكبير بسيط */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل */
+    }
+
+    /* مؤشر السهم الناري */
+    .speedtest-widget {
+        cursor: url('path-to-your-fire-arrow-image.png'), auto; /* ضع مسار الصورة هنا */
+    }
+
+    /* تأثير التلاشي للنص */
+    .speedtest-footer {
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .speedtest-widget:hover .speedtest-footer {
+        opacity: 1;
+    }
+</style>
+
+<div class="speedtest-widget" style="text-align:right;">
+    <div style="min-height:360px;">
+        <div style="width:100%; height:0; padding-bottom:50%; position:relative;">
+            <iframe 
+                style="border:none; position:absolute; top:0; left:0; width:100%; height:100%; min-height:360px; overflow:hidden;" 
+                src="//openspeedtest.com/speedtest" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <p class="speedtest-footer" style="margin-top:10px; font-size:14px; color:#555;">
+        Provided by <a href="https://openspeedtest.com" target="_blank" rel="noopener noreferrer">OpenSpeedtest.com</a>
+    </p>
+</div>
+<!-- OST Widget code end -->
+	
+</body>
+</html>
